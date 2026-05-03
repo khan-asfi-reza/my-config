@@ -1,15 +1,8 @@
-Applications/
-DataGripProjects/
-Desktop/
-Documents/
-Downloads/
-Google Drive
-IdeaProjects/
-Library/
-Movies/
-Music/
-OrbStack/
-Pictures/
-Projects/
-Public/
+*
 
+!.bashscripts/
+!.bashscripts/
+!.wezterm.lua
+!.config/nvim
+!.tmux.conf
+!.vimrc
