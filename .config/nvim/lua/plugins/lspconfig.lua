@@ -1,19 +1,25 @@
--- lua/plugins/python.lua
+-- ~/.config/nvim/lua/plugins/lspconfig.lua
 return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
       basedpyright = {
-         analysis = {
-          moveSymbol = true,
-        }
+        settings = {
+          basedpyright = {
+            analysis = {
+              typeCheckingMode = "standard",
+            },
+          },
+        },
       },
+
       ruff = {
+        capabilities = {
+          general = { positionEncodings = { "utf-16" } },
+        },
         cmd_env = { RUFF_TRACE = "messages" },
         init_options = {
-          settings = {
-            logLevel = "error",
-          },
+          settings = { logLevel = "error" },
         },
         keys = {
           { "<leader>co", LazyVim.lsp.action["source.organizeImports"], desc = "Organize Imports" },
